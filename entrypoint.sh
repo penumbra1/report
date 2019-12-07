@@ -25,13 +25,14 @@ else
 fi
 
 $packager install
-$packager $install @packtracker/webpack-plugin
 
 if [ "$CRA_VERSION" != "null" ]; then
   echo "Detected Create React App ($CRA_VERSION)"
   echo "y" | $packager run eject
   export WEBPACK_CONFIG_PATH='./config/webpack.config.js'
 fi
+
+$packager $install @packtracker/webpack-plugin
 
 export NODE_ENV="production"
 
