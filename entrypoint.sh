@@ -25,7 +25,7 @@ else
 fi
 
 $packager install
-$packager $install @packtracker/webpack-plugin@2.2.0
+$packager $install @packtracker/webpack-plugin
 
 if [ "$CRA_VERSION" != "null" ]; then
   echo "Detected Create React App ($CRA_VERSION)"
